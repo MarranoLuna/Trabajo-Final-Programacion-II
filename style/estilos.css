@@ -1,0 +1,805 @@
+body {
+    background-image: url('../imagenes/fondoo.webp');
+    background-size: cover; 
+    background-attachment: fixed; /* Hace que la imagen se mantenga fija al hacer scroll */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative; /* Mantén esto para el posicionamiento */
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+/* Estilo para el formulario */
+#formAltaAlumno {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 350px; /* Espacio entre el logo y el formulario */
+}
+
+#formModificacionMateria {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Espacio entre el logo y el formulario */
+}
+
+
+#institutoForm {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Espacio entre el logo y el formulario */
+}
+
+
+#formAltaMateria {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Espacio entre el logo y el formulario */
+}
+
+
+#formModificarAlumno {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Espacio entre el logo y el formulario */
+}
+
+
+#formAsistencia {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: q0px; /* Espacio entre el logo y el formulario */
+}
+
+#formAgregarNota {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: q0px; /* Espacio entre el logo y el formulario */
+}
+
+#formModificacionInstituto {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Espacio entre el logo y el formulario */
+}
+
+
+#formTomarAsistencia{
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espacio entre el logo y el formulario */
+}
+
+
+
+/* Estilos para los inputs de clase "input" */
+.input {
+    font-size: 18px;
+    padding: 20px;
+    width: 100%; /* Hace que los inputs ocupen el 100% del formulario */
+    margin: 20px 0; /* Espacio entre inputs */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boton-contenedor {
+    text-align: center;
+    margin-top: 20px; /* opcional: añade margen superior para separar el botón de la tabla */
+}
+
+/* Estilo para el botón de ingresar */
+#boton_enviar {
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 20px 0; /* Espacio entre inputs y botón */
+    border: none;
+    background-color: #e09320; /* Color del botón de ingresar */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.marcarTodo {
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 10px 0; /* Espacio entre inputs y botón */
+    border: none;
+    background-color: #686868; /* Color del botón */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.contenedorBoton {
+    text-align: center; /* Centra el botón */
+}
+
+/* Otras configuraciones de diseño */
+header {
+    width: 100%;
+    padding: 1px ;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+}
+
+/* Estilos para el logo */
+.logo {
+    max-width:450px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.input::placeholder {
+    color: #999; /* Cambia el color del placeholder */
+    font-style: italic; /* Cambia el estilo de la fuente, por ejemplo, itálico */
+    font-size: 20px; /* Cambia el tamaño de la fuente */
+}
+
+.textos {
+    font-size: 40px; /* Tamaño de la fuente */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333; /* Color del texto */
+    margin-top: 20px; /* Espacio encima del texto */
+    margin-bottom: 30px; /* Espacio debajo del texto para separar del formulario */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.textosForm {
+    font-size: 30px; /* Tamaño de la fuente */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333; /* Color del texto */
+    margin-top: 2px; /* Espacio encima del texto */
+    margin-bottom: 2px; /* Espacio debajo del texto para separar del formulario */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none; /* Sin borde */
+    background-color: white; /* Fondo blanco para los selectores */
+    color: #333; /* Color del texto en los selectores */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el selector */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para el estado de foco en los selectores */
+select:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.5); /* Efecto de foco */
+}
+
+/* Sección de asistencia, centrada y alineada horizontalmente */
+.asistencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Más espacio entre los elementos */
+    margin-top: 10px; /* Ajustar la distancia superior según necesidad */
+    padding: 20px; /* Añadir padding a la sección */
+    background-color: #fff; /* Fondo blanco para la sección */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.asistencia div {
+    display: flex;
+    flex-direction: column; /* Alinear el texto arriba del input/select */
+    align-items: center; /* Centrar el contenido dentro del div */
+    width: 200px; /* Ajustar el ancho de cada campo */
+}
+
+.asistencia p {
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    font-weight: bold; /* Poner en negrita */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 10px; /* Separación entre el texto y el input/select */
+}
+
+.asistencia input,
+.asistencia select {
+    padding: 12px; /* Aumentar el tamaño del padding */
+    width: 100%; /* Hacer que ocupen todo el ancho del div */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde simple */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para los inputs/selects */
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
+}
+
+h1 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #555;
+}
+
+.no-data {
+    text-align: center;
+    font-style: italic;
+}
+
+.error-message {
+    color: white; /* Color del texto */
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f54c36; /* Fondo rojo */
+    padding: 15px; /* Padding para dar espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Alineación centrada */
+    width: 100%; /* Ajusta el ancho para que ocupe todo el formulario */
+    margin-bottom: 5px; /* Espacio debajo del mensaje */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    font-weight: bold; /* Texto en negrita */
+}
+
+
+.tabla {
+    background-color: rgb(255, 255, 255); /* Cambia el color de fondo de la tabla */
+    color: black;                /* Cambia el color del texto */
+    border: 1px solid rgb(179, 179, 179);     /* Cambia el color del borde de la tabla */
+  }
+  
+  .tabla th {
+    background-color: rgb(192, 192, 192);  /* Color de fondo para el encabezado */
+    color: white;                /* Color del texto en el encabezado */
+  }
+  
+  .tabla td {
+    padding: 10px;               /* Espaciado dentro de las celdas */
+    border: 1px solid rgb(184, 184, 184);     /* Bordes entre las celdas */
+  }
+
+
+.select{
+    width: 300px;  /* Ancho específico para el select grande */
+    height: 50px;  /* Altura específica para el select grande */
+    font-size: 18px;
+}
+
+
+.tablaAsistencia {
+    background-color: rgb(255, 255, 255); /* Cambia el color de fondo de la tabla */
+    color: black;                /* Cambia el color del texto */
+    border: 1px solid rgb(179, 179, 179);     /* Cambia el color del borde de la tabla */
+    width: 100%;
+  }
+  
+  .tablaAsistencia th {
+    background-color: rgb(192, 192, 192);  /* Color de fondo para el encabezado */
+    color: white;                /* Color del texto en el encabezado */
+  }
+  
+  .tablaAsistencia td {
+    padding: 10px;               /* Espaciado dentro de las celdas */
+    border: 1px solid rgb(184, 184, 184);     /* Bordes entre las celdas */
+  }
+
+
+.textosTabla{
+    font-size: 20px; /* Tamaño de la fuente */
+    font-family: sans-serif;
+    color: #333; /* Color del texto */
+}
+
+#formAlumnos{
+    width: 600px; 
+    height: 600px;
+    margin-top: 10%;
+}
+
+
+
+#formProfesor{
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding-top:30px;      /* Espacio en la parte superior */
+    padding-right: 60px;    /* Espacio a la derecha */
+    padding-bottom: 10px;   /* Espacio en la parte inferior */
+    padding-left: 60px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 350px; /* Espacio entre el logo y el formulario */
+}
+
+#formLogin{
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding-top:20px;      /* Espacio en la parte superior */
+    padding-right: 70px;    /* Espacio a la derecha */
+    padding-bottom: 30px;   /* Espacio en la parte inferior */
+    padding-left: 70px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Espacio entre el logo y el formulario */
+}
+
+
+#formTomarAsistencia{
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding-top:20px;      /* Espacio en la parte superior */
+    padding-right: 120px;    /* Espacio a la derecha */
+    padding-bottom: 30px;   /* Espacio en la parte inferior */
+    padding-left: 120px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 700px;  /* Espacio entre el logo y el formulario */
+}
+
+#formVincular {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: white;
+    padding-top:20px;      /* Espacio en la parte superior */
+    padding-right: 120px;    /* Espacio a la derecha */
+    padding-bottom: 30px;   /* Espacio en la parte inferior */
+    padding-left: 120px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;  /* Espacio entre el logo y el formulario */
+}
+
+
+
+
+
+#formBoton{
+    display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        height: 5px;
+}
+
+
+.menu {
+    display: flex;
+    gap: 30px;
+    margin-left: 700px;
+}
+
+/* Estilos de cada opción principal del menú */
+.menu-item {
+    position: relative;
+    font-size: 1em;
+    color: #000000;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+
+.menu2 {
+    display: flex;
+    gap: 30px;
+    margin-left: 1300px;
+}
+
+/* Estilos de cada opción principal del menú */
+.menu2-item {
+    position: relative;
+    font-size: 1em;
+    color: #000000;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+
+
+.btn-inicio {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Color naranja */
+    color: #000000; /* Texto blanco */
+    border: 1px solid #ff961e;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-inicio:hover {
+    background-color: #ffbc65; /* Color rojo más oscuro al pasar el ratón */
+}
+
+.btn-cerrar-sesion {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Color rojo */
+    color: #000000; /* Texto blanco */
+    border: 1px solid #ff961e;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #ffbc65; /* Color rojo más oscuro al pasar el ratón */
+}
+
+.form-container {
+    display: flex;
+    gap: 40px; /* Espacio entre los formularios */
+}
+
+
+
+#inputDNI{
+    font-size: 18px;
+    padding: 20px;
+    width: 80%; /* Hace que los inputs ocupen el 100% del formulario */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dni {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #ff961e;
+    color: #000000;
+    padding: 5px; /* Reduce el espaciado interno */
+    border-radius: 5px;
+    margin: 2px 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px; /* Reduce el tamaño de fuente */
+    width: 200px; /* Define un ancho específico para el cuadro */
+    height: 100px; /* Define un ancho específico para el cuadro */
+}
+
+
+.materias{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.opcion{
+    font-size: 17px !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333; /* Color del texto */
+}
+
+.iconos {
+    display: flex;
+    gap: 15px; /* Espacio entre los iconos */
+    justify-content: center; /* Alineación a la izquierda */
+}
+
+.iconos a {
+    color: rgb(255, 156, 25); /* Color de los iconos */
+    text-decoration: none;
+}
+
+.iconos a:hover i {
+    color: rgb(247, 169, 26); /* Cambia el color al pasar sobre el icono */
+}
+
+.textosTabla {
+    border: none; /* Quita el borde de la celda de los iconos */
+}
+
+
+#tablaInfoAlumnos {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(179, 179, 179);
+    width: 90%;
+    height: 200px;
+    border-collapse: collapse;
+    margin-top:100px; /* Aumenta el margen superior de la tabla aquí */
+}
+
+#tablaInfoAlumnos th {
+    background-color: rgb(141, 141, 141); /* Color de fondo para el encabezado */
+    color: white;                         /* Color del texto en el encabezado */
+    padding: 10px;                        /* Espaciado dentro del encabezado */
+    text-align: center;                   /* Centrar el texto en el encabezado */
+}
+
+#tablaInfoAlumnos td {
+    padding: 10px;                        /* Espaciado dentro de las celdas */
+    border: 1px solid rgb(184, 184, 184); /* Bordes entre las celdas */
+    text-align: center;                   /* Centrar el texto horizontalmente */
+    vertical-align: middle;               /* Centrar el texto verticalmente */
+    width: auto;                          /* Ajusta el ancho de las celdas según el contenido */
+}
+
+
+#tablaInfoInstitutos {
+    background-color: rgb(255, 255, 255); /* Color de fondo de la tabla */
+    color: black;                         /* Color del texto */
+    border: 1px solid rgb(179, 179, 179); /* Color del borde de la tabla */
+    width: 60%;   
+    height: 200px;                         /* Ancho total de la tabla */
+    border-collapse: collapse;            /* Unir los bordes de las celdas */
+}
+
+#tablaInfoInstitutos th {
+    background-color: rgb(141, 141, 141); /* Color de fondo para el encabezado */
+    color: white;                         /* Color del texto en el encabezado */
+    padding: 10px;                        /* Espaciado dentro del encabezado */
+    text-align: center;                   /* Centrar el texto en el encabezado */
+}
+
+#tablaInfoInstitutos td {
+    padding: 10px;                        /* Espaciado dentro de las celdas */
+    border: 1px solid rgb(184, 184, 184); /* Bordes entre las celdas */
+    text-align: center;                   /* Centrar el texto horizontalmente */
+    vertical-align: middle;               /* Centrar el texto verticalmente */
+    width: auto;                          /* Ajusta el ancho de las celdas según el contenido */
+}
+
+
+#tablaRequisitos {
+    background-color: rgb(255, 255, 255); /* Color de fondo de la tabla */
+    color: black;                         /* Color del texto */
+    border: 1px solid rgb(179, 179, 179); /* Color del borde de la tabla */
+    width: 80%;   
+    height: 200px;                      
+    border-collapse: collapse;            /* Unir los bordes de las celdas */
+}
+
+#tablaRequisitos th {
+    background-color: rgb(129, 129, 129); /* Color de fondo para el encabezado */
+    color: white;                         /* Color del texto en el encabezado */
+    padding: 10px;                        /* Espaciado dentro del encabezado */
+    text-align: center;                   /* Centrar el texto en el encabezado */
+}
+
+#tablaRequisitos td {
+    padding: 10px;                        /* Espaciado dentro de las celdas */
+    border: 1px solid rgb(184, 184, 184); /* Bordes entre las celdas */
+    text-align: center;                   /* Centrar el texto horizontalmente */
+    vertical-align: middle;               /* Centrar el texto verticalmente */
+    width: auto;                          /* Ajusta el ancho de las celdas según el contenido */
+}
+
+
+#tablaModifRequisitos {
+    background-color: rgb(255, 255, 255); /* Color de fondo de la tabla */
+    color: black;                         /* Color del texto */
+    border: 1px solid rgb(179, 179, 179); /* Color del borde de la tabla */
+    width: 80%;   
+    height: 100px;                      
+    border-collapse: collapse;            /* Unir los bordes de las celdas */
+}
+
+#tablaModifRequisitos th {
+    background-color: rgb(129, 129, 129); /* Color de fondo para el encabezado */
+    color: white;                         /* Color del texto en el encabezado */
+    padding: 10px;                        /* Espaciado dentro del encabezado */
+    text-align: center;                   /* Centrar el texto en el encabezado */
+}
+
+#tablaModifRequisitos td {
+    padding: 10px;                        /* Espaciado dentro de las celdas */
+    border: 1px solid rgb(184, 184, 184); /* Bordes entre las celdas */
+    text-align: center;                   /* Centrar el texto horizontalmente */
+    vertical-align: middle;               /* Centrar el texto verticalmente */
+    width: auto;                          /* Ajusta el ancho de las celdas según el contenido */
+}
+
+
+
+#tablaInfoMaterias {
+    background-color: rgb(255, 255, 255); /* Color de fondo de la tabla */
+    color: black;                         /* Color del texto */
+    border: 1px solid rgb(179, 179, 179); /* Color del borde de la tabla */
+    width: 60%;   
+    height: 200px;                         /* Ancho total de la tabla */
+    border-collapse: collapse;            /* Unir los bordes de las celdas */
+}
+
+#tablaInfoMaterias th {
+    background-color: rgb(141, 141, 141); /* Color de fondo para el encabezado */
+    color: white;                         /* Color del texto en el encabezado */
+    padding: 10px;                        /* Espaciado dentro del encabezado */
+    text-align: center;                   /* Centrar el texto en el encabezado */
+}
+
+#tablaInfoMaterias td {
+    padding: 10px;                        /* Espaciado dentro de las celdas */
+    border: 1px solid rgb(184, 184, 184); /* Bordes entre las celdas */
+    text-align: center;                   /* Centrar el texto horizontalmente */
+    vertical-align: middle;               /* Centrar el texto verticalmente */
+    width: auto;                          /* Ajusta el ancho de las celdas según el contenido */
+}
+
+#bienvenido{
+    margin-top: 0px; /* Espacio encima del texto */
+    margin-bottom: 1px; /* Espacio debajo del texto para separar del formulario */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+
+.contenedor {
+    max-width: 800px; /* O cualquier valor en píxeles que prefieras */
+    width: 50%;
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    padding: 20px; /* Espacio interno para separar la tabla del borde */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+    margin: 20px auto; /* Centramos el contenedor y agregamos margen */
+    max-width: 90%; /* Limitar el ancho máximo del contenedor */
+    overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+}
+
+#contenedorRequisitos {
+    width: 50%;
+    height: 350px;
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    padding: 20px; /* Espacio interno para separar la tabla del borde */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+    margin: 40px; /* Centramos el contenedor y agregamos margen */
+    max-width: 90%; /* Limitar el ancho máximo del contenedor */
+    overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+}
+
+#contenedorTabla {
+        max-width: 1000px;
+        width: 50%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 50px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto; /* Aumenta el valor del margen superior aquí */
+        max-width: 100%;
+        overflow-x: auto;
+        padding-top: 2px;
+}
+
+
+.contenedorAlumnosMaterias {
+    max-width: 1000px; /* O cualquier valor en píxeles que prefieras */
+    width: 80%;
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    padding: 20px; /* Espacio interno para separar la tabla del borde */
+    padding-top: 30px; /* Más espacio arriba */
+    padding-bottom: 50px; /* Más espacio abajo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+    margin: 20px auto; /* Centramos el contenedor y agregamos margen */
+    max-width: 90%; /* Limitar el ancho máximo del contenedor */
+    overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+}
+
+.contenedorLogin {
+    max-width: 500px; /* Limita el ancho máximo del contenedor */
+    width: 70%;
+    max-height: 600px; /* Limita el ancho máximo del contenedor */
+    height: 70%;
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+    margin: 10px auto; /* Centramos el contenedor */
+    overflow-x: auto; /* Permite scroll horizontal si hay contenido muy ancho */
+    text-align: center; /* Centrar el contenido */
+}
+
+
+#materias div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#materias input[type="checkbox"] {
+    transform: scale(1.2); /* Aumenta el tamaño del checkbox */
+    margin-right: 8px; /* Espacio entre checkbox y label */
+}
+
+#materias label {
+    font-size: 20px; /* Cambia el tamaño de la fuente de la etiqueta */
+}
+
+#institutos{
+        width: 100%; /* Ancho completo del contenedor */
+        max-width: 300px; /* Ancho máximo */
+        height: 50px; /* Altura del select */
+        padding: 5px; /* Espacio interno */
+        font-size: 16px; /* Tamaño de la fuente */
+        border-radius: 5px; /* Bordes redondeados (opcional) */
+        border: 1px solid #ccc; /* Borde opcional */
+}
