@@ -35,7 +35,7 @@ session_start();
 require "../database.php";
 $db = new Database();
 
-$cue = $_GET['cue'];  /
+$cue = $_GET['cue'];  
 
 $materias = $db->traer_materias_por_instituto($cue); 
 ?>
